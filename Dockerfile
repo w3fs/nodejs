@@ -1,13 +1,13 @@
-FROM ubuntu:12.04
+FROM stackbrew/ubuntu:13.10
 
 MAINTAINER Dockerfiles "dockerfiles.github.io"
 
 # Install Node.js
 
-sudo apt-get update
-sudo apt-get install -y python-software-properties python g++ make
-sudo add-apt-repository -y ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
+RUN apt-get update
+RUN apt-get install -y software-properties-common python g++ make
+RUN add-apt-repository -y ppa:chris-lea/node.js
+RUN apt-get update
+RUN apt-get install -y nodejs
 
 
